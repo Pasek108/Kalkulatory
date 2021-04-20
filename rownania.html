@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Równania kwadratowe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Cache-control" content="public" />
+    <meta name="theme-color" content="##2c2c2c" />
+
+    <script type="text/javascript" charset="UTF-8" src="https://cdn.jsdelivr.net/npm/jsxgraph@1.2.1/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.2.1/distrib/jsxgraph.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header id="header">
+      <div id="logo" class="logo">
+        <div id="logo_txt" class="logo_txt">Przeliczanie</div>
+      </div>
+      <div class="tryb">
+        <div class="przelacznik">
+          <i class="fas fa-sun"></i>
+          <div id="slider" class="slider">
+            <div id="tryb" class="jasny"></div>
+          </div>
+          <i class="fas fa-moon"></i>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <p><a href="index.html">Systemy binarne</a> / <a href="rownania.html">Funkcja kwadratowa</a> / <a href="ip.html">Kalkulator ip</a></p>
+      <br />
+      <div class="dane">
+        <form>
+          Postać:
+          <select id="postac">
+            <option>Ogólna</option>
+            <option>Iloczynowa</option>
+            <option>Kanoniczna</option></select
+          ><br />
+
+          Podaj wzór funkcji:
+          <p class="wzor" id="ogolna">
+            <input type="number" class="a" value="0" /> \(x^2\) <input type="number" id="b" value="0" /> \(x\)
+            <input type="number" id="c" value="0" />
+            <br />
+            <button id="obliczo">Oblicz</button>
+          </p>
+
+          <p class="wzor" id="iloczynowa" style="display: none">
+            <input type="number" class="a" value="0" />
+            \((x\)<input type="number" id="x1" value="0" />\()\) \((x\)<input type="number" id="x2" value="0" />\()\)
+            <br />
+            <button id="obliczi">Oblicz</button>
+          </p>
+
+          <p class="wzor" id="kanoniczna" style="display: none">
+            <input type="number" class="a" value="0" />
+            \((x\)<input type="number" id="p" value="0" />\()\)
+            <input type="number" id="q" value="0" />
+            <br />
+            <button id="obliczk">Oblicz</button>
+          </p>
+        </form>
+
+        <span id="wynik"></span>
+      </div>
+      <div id="jxgbox" class="jxgbox"></div>
+    </main>
+
+    <footer id="footer">Artur Pas 2021</footer>
+    <script src="rownania.js"></script>
+    <script src="dark_theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" defer></script>
+  </body>
+</html>
